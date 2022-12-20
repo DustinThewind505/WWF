@@ -1,9 +1,18 @@
+import React, { useState } from "react";
 import LinkCard from "./components/LinkCard";
 
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [formData, setFormData] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    setFormData("");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +29,12 @@ function App() {
             <li>Thing 2</li>
           </ul>
         </footer>
+        <p>Hello {formData}</p>
+        <form onSubmit={handleSubmit}>
+          <label>Llama
+            <input onChange={e => setFormData(e.target.value)} value={formData} />
+          </label>
+        </form>
       </header>
       <LinkCard trackTitle="On Coming Storm" track={872998699}/>
       <LinkCard trackTitle="Dead Wait" track={3787462959}/>

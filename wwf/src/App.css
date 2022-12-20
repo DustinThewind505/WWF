@@ -42,6 +42,11 @@
   border: 2px solid white;
 }
 
+.App-header input {
+  border: 2px solid black;
+  margin: 2% 0;
+}
+
 .App-link {
   color: lime;
 }
