@@ -19,9 +19,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>No Chemistry</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <NavList />
+        <div>
+          <h1>No Chemistry</h1>
+          <img src={logo} className="App-logo" alt="logo" />
+          <NavList />
+        </div>
         <p>Hello {formData}</p>
         <form onSubmit={handleSubmit}>
           <label>
